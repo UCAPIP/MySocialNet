@@ -79,3 +79,10 @@
   border-radius: 50%;
   margin: 0.5em;
 }
+
+.textArea {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15fr 1fr;
+  grid-template-columns: 15fr 1fr;
+}

@@ -34,4 +34,16 @@
 		
 	}
 
+	export let addPost = (postMessage) => {
+		let newPost = {
+			id: 0,
+			message: postMessage,
+			name: "Ivan",
+			age: 0,
+			countLike:0
+		}
+
+		state.profile.postsArr.push();
+	}
+
 	export default state;

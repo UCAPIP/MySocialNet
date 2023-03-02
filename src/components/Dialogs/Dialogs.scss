@@ -70,7 +70,14 @@
 		width: 2em;
 		height: 2em;
 		border-radius: 50%;
-		
 		margin: 0.5em;
 	}
 }
+
+.textArea {
+	display: grid;
+	grid-template-columns: 15fr  1fr;
+} 
+
+
+
