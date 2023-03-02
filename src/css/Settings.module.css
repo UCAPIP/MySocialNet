@@ -1,0 +1,13 @@
+.settingsBox {
+  margin: 2em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1em 2fr;
+  grid-template-columns: 1fr 2fr;
+  -webkit-column-gap: 1em;
+     -moz-column-gap: 1em;
+          column-gap: 1em;
+  background-color: #206676;
+  padding: 1em;
+  color: #fff;
+}

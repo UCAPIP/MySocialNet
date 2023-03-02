@@ -1,0 +1,85 @@
+.avaDescription {
+  margin: 2em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1em 8fr;
+  grid-template-columns: 2fr 8fr;
+  -webkit-column-gap: 1em;
+     -moz-column-gap: 1em;
+          column-gap: 1em;
+  background-color: #206676;
+  padding: 1em;
+}
+.avaDescription img {
+  width: 200px;
+}
+.avaDescription div {
+  color: #fff;
+  font-size: 1.5em;
+}
+.avaDescription div p {
+  padding-bottom: 0.7em;
+}
+
+.status {
+  color: lightgrey;
+}
+
+.myPosts {
+  background-color: #206676;
+  margin: 2em;
+}
+.myPosts h3 {
+  padding: 1em;
+  color: white;
+}
+.myPosts textarea {
+  padding: 1em;
+  margin: 1em;
+}
+
+.boxMyPost {
+  display: -ms-grid;
+  display: grid;
+}
+.boxMyPost button {
+  width: 20%;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  margin: 1em;
+}
+
+button {
+  background-color: white;
+  border: none;
+  padding: 1em;
+}
+button:hover {
+  background-color: #FF7F00;
+}
+button:active {
+  background-color: #BF7730;
+}
+
+.posts {
+  margin: 2em;
+  background-color: #206676;
+  color: #fff;
+}
+.posts img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  float: left;
+  padding: 2em;
+}
+.posts p {
+  padding: 1em;
+}
+.posts button {
+  width: 50px;
+  height: 50px;
+}
+.posts h4 {
+  padding-top: 1em;
+}

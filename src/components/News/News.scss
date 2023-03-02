@@ -1,0 +1,9 @@
+@import "./../../scss/variables.scss";
+@import "./../../scss/mixins.scss";
+
+.newsBox {
+		margin: 2em;
+		background-color: $aBg;
+		padding: 1em;
+		color: $aColor;
+}

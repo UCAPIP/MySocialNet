@@ -1,0 +1,76 @@
+@import "./../../scss/variables.scss";
+@import "./../../scss/mixins.scss";
+
+.dialogBox {
+		margin: 2em;
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		column-gap: 1em;
+		background-color: $aBg;
+		padding: 1em;
+		color: $aColor;
+		.item {
+		text-decoration: none;
+		padding: 1em;
+		margin: 1em;
+		color: $aColor;
+	}
+}
+
+.noActive {
+	text-decoration: none;
+}
+
+.yesActive {
+	text-decoration: none;
+}
+
+.contactBox {
+	display: grid;
+	grid-template-columns: 1fr 5fr;
+	margin-left: 1em;
+	margin-right: 1em;
+	border-bottom: 1px solid $bgColorCont;
+	img {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		margin: 1em;
+	}
+
+	&:hover {
+		background-color: $aBgHover;
+		color: $aColorHover;
+		}
+	&:active {
+			background-color: $aBgActive;
+			color: $aColorActive;
+		}
+}
+
+.title {
+	padding: 1em;
+}
+
+.message {
+	padding: 0.5em;
+	margin: 0.5em;
+	background-color: $aBg;
+	border-radius: 10px;
+	width: fit-content;
+	color: $aColor;
+}
+
+.bgMessage {
+	background-color: $bgColor;
+	padding: 1em;
+	display: grid;
+	grid-template-columns: 1fr 20fr;
+	img {
+		width: 2em;
+		height: 2em;
+		border-radius: 50%;
+		
+		margin: 0.5em;
+	}
+}

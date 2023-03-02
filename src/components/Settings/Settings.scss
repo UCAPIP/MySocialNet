@@ -1,0 +1,12 @@
+@import "./../../scss/variables.scss";
+@import "./../../scss/mixins.scss";
+
+.settingsBox {
+		margin: 2em;
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		column-gap: 1em;
+		background-color: $aBg;
+		padding: 1em;
+		color: $aColor;
+}

@@ -1,0 +1,82 @@
+@import "./../../scss/variables.scss";
+@import "./../../scss/mixins.scss";
+
+.nav {
+	grid-area: NAVI;
+	background-color: $bgColorNav;
+	padding-top: 2em;
+	p {
+		margin-bottom: 2em;
+	}
+}
+
+
+.item {
+		text-decoration: none;
+		padding: 1em;
+		margin: 1em;
+		color: $aColor;
+		
+		&:hover {
+		background-color: $aBgHover;
+		color: $aColorHover;
+		}
+		&:active {
+			background-color: $aBgActive;
+			color: $aColorActive;
+		}
+	}
+
+	.activeLink {
+		background-color: $aBgHover;
+		color: $aColorHover;
+		text-decoration: none;
+		padding: 1em;
+		margin: 0;
+		color: $aColorActive;
+		font-weight: bold;
+	}
+
+	.friendBox {
+		color: $aColor;
+		display: grid;
+		text-align: center;
+		grid-template-columns: 100px 100px 100px;
+		margin: 2em;
+		gap: 5px;
+		
+		div {
+			background-color: $aBg;
+			height: 100px;
+			
+			&:hover {
+				background-color: $aBgHover;
+				color: $aColorHover;
+			}
+			&:active {
+				background-color: $aBgActive;
+				color: $aColorActive;
+			}
+			
+		}
+		img {
+			width: 45px;
+			height: 45px;
+			border-radius: 50%;
+			padding-top: 20%;
+		}
+		p {
+			margin-bottom: 0;
+			align-items:center;
+		}
+		
+	}
+
+	.title {
+		background-color: $aBgHover;
+		color: $aColorHover;
+		padding: 1em;
+		margin: 0;
+		color: $aColorActive;
+		font-weight: bold;
+	}
