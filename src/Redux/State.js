@@ -1,4 +1,5 @@
-
+import { reRenderTree } from "../render";
+	
 	let state = {
 		profile: {
 			postsArr: [
@@ -42,8 +43,17 @@
 			age: 0,
 			countLike:0
 		}
+		state.profile.postsArr.push(newPost);
+		 reRenderTree(state);
+	}
 
-		state.profile.postsArr.push();
+	export let addMessage = (sendMessage) => {
+		let newMessage = {
+			id: 0,
+			message: sendMessage
+		}
+		state.dialogs.messageArr.push(newMessage);
+		 reRenderTree(state);
 	}
 
 	export default state;

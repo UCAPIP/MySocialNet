@@ -6,6 +6,7 @@ const MyPosts = (props) => {
 	let newPostElement = React.createRef();
 
 	let addPost = () => {
+		
 		let text = newPostElement.current.value;
 		props.addPost(text);
 	}
@@ -16,7 +17,7 @@ const MyPosts = (props) => {
 				<h3>Мои посты:</h3>
 				<div className={classes.boxMyPost}>
 					<textarea placeholder="Ваш пост..." wrap="soft" ref={newPostElement}></textarea>
-					<button onClick={ addPost }>Добавить пост</button>
+					<button type="button" onClick={addPost}>Добавить пост</button>
 				</div>
 			</div>
 		</div>

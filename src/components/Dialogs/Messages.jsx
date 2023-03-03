@@ -14,8 +14,11 @@ const Messages = (props) => {
 	let newMessageRef = React.createRef();
 
 	let sendMessage = () => {
+
+		debugger;
 		let text = newMessageRef.current.value;
-		alert(text);
+		props.addMessage(text);
+		
 	}
 
 	return (
