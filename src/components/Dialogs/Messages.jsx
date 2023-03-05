@@ -14,10 +14,12 @@ const Messages = (props) => {
 	let newMessageRef = React.createRef();
 
 	let sendMessage = () => {
+		props.addMessage();
+	}
 
-		debugger;
+	let onChangeText = () => {
 		let text = newMessageRef.current.value;
-		props.addMessage(text);
+		props.updateNewMessageText(text);
 		
 	}
 
@@ -28,7 +30,7 @@ const Messages = (props) => {
 				{messageNew}
 			</div>
 			<div className={classes.textArea}>
-				<textarea placeholder="Введите ваше сообщение ..." wrap="soft" ref={newMessageRef}></textarea>
+				<textarea placeholder="Введите ваше сообщение ..." wrap="soft" ref={newMessageRef} value={props.usersDialogs} onChange={onChangeText}></textarea>
 				<button onClick={ sendMessage }>Отправить сообщение</button>
 			</div>
 		</div>

@@ -8,7 +8,7 @@ const Dialogs = (props) => {
 	return (
 			<div className={classes.dialogBox}>
 			<Contacts contactsData={props.usersDialogs.contactArr} />
-			<Messages messagesData={props.usersDialogs.messageArr} addMessage={props.addMessage} />
+			<Messages messagesData={props.usersDialogs.messageArr} addMessage={props.addMessage} usersDialogs={props.usersDialogs.newMessageText} updateNewMessageText={props.updateNewMessageText}/>
 			</div>
 	);
 }

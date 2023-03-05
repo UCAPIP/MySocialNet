@@ -1,4 +1,5 @@
-import { reRenderTree } from "../render";
+let reRenderTree = () => {
+}
 	
 	let state = {
 		profile: {
@@ -6,7 +7,9 @@ import { reRenderTree } from "../render";
 			{ id: 0, message: 'Слова дауна по имени Иван.', name: 'Иван Иванов', age: 23, countLike: 14 },
 			{ id: 0, message: 'IDI NHUI LOX.', name: 'GAY DMITROV', age: 5, countLike: 178 },
 			{ id: 0, message: 'Да мне похуй', name: 'Сергей Сергеев', age: 31, countLike: 23 }
-			]
+			],
+			newPostText: ''
+			
 		},
 
 		dialogs: {
@@ -18,7 +21,8 @@ import { reRenderTree } from "../render";
 			{ id: 0, message: "lorem" },
 			{ id: 1, message: "Lorem ipsum dolor sit amet." },
 			{ id: 3, message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, nobis mollitia?" }
-			]
+			],
+			newMessageText: ''
 		},
 
 		navBar: {
@@ -35,25 +39,41 @@ import { reRenderTree } from "../render";
 		
 	}
 
-	export let addPost = (postMessage) => {
+	export const addPost = () => {
 		let newPost = {
 			id: 0,
-			message: postMessage,
+			message: state.profile.newPostText,
 			name: "Ivan",
 			age: 0,
 			countLike:0
 		}
 		state.profile.postsArr.push(newPost);
-		 reRenderTree(state);
+		state.profile.newPostText = '';
+		reRenderTree(state);
 	}
 
-	export let addMessage = (sendMessage) => {
+	export const addMessage = () => {
 		let newMessage = {
 			id: 0,
-			message: sendMessage
+			message: state.dialogs.newMessageText
 		}
 		state.dialogs.messageArr.push(newMessage);
-		 reRenderTree(state);
+		state.dialogs.newMessageText = '';
+		reRenderTree(state);
+	}
+
+	export const updateNewPostText = (newText) => {
+		state.profile.newPostText = newText;
+		reRenderTree(state);
+		}
+
+	export const updateNewMessageText = (newText) =>{
+		state.dialogs.newMessageText = newText;
+		reRenderTree(state);
+	}
+	
+	export const subscribe = (observer) => {
+		reRenderTree = observer;
 	}
 
 	export default state;
