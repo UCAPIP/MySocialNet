@@ -21,9 +21,9 @@ const App = (props) => {
           <div className='content'>
             <Routes>
               <Route path='/profile' 
-              element={<Profile usersPosts={props.state.profile} addPost={props.addPost} updateNewPostText={props.updateNewPostText}/>}></Route>
+              element={<Profile usersPosts={props.state.profile} dispatch={props.dispatch} />}></Route>
               <Route path='/dialogs/*' 
-              element={<Dialogs usersDialogs={props.state.dialogs} addMessage={props.addMessage} updateNewMessageText={props.updateNewMessageText}/>}></Route>
+              element={<Dialogs usersDialogs={props.state.dialogs} dispatch={props.dispatch} />}></Route>
               <Route path='/news' 
               element={<News />}></Route>
               <Route path='/music' 

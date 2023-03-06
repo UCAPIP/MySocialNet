@@ -1,0 +1,80 @@
+.dialogBox {
+  margin: 2em;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  -webkit-column-gap: 1em;
+     -moz-column-gap: 1em;
+          column-gap: 1em;
+  background-color: #206676;
+  padding: 1em;
+  color: #fff;
+}
+.dialogBox .item {
+  text-decoration: none;
+  padding: 1em;
+  margin: 1em;
+  color: #fff;
+}
+
+.noActive {
+  text-decoration: none;
+}
+
+.yesActive {
+  text-decoration: none;
+}
+
+.contactBox {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  margin-left: 1em;
+  margin-right: 1em;
+  border-bottom: 1px solid #015367;
+}
+.contactBox img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 1em;
+}
+.contactBox:hover {
+  background-color: #FF7F00;
+  color: #000;
+}
+.contactBox:active {
+  background-color: #BF7730;
+  color: #000;
+}
+
+.title {
+  padding: 1em;
+}
+
+.message {
+  padding: 0.5em;
+  margin: 0.5em;
+  background-color: #206676;
+  border-radius: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #fff;
+}
+
+.bgMessage {
+  background-color: #60B9CE;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr 20fr;
+}
+.bgMessage img {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  margin: 0.5em;
+}
+
+.textArea {
+  display: grid;
+  grid-template-columns: 15fr 1fr;
+}/*# sourceMappingURL=Dialogs.css.map */

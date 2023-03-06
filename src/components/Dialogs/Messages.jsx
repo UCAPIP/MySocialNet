@@ -14,13 +14,14 @@ const Messages = (props) => {
 	let newMessageRef = React.createRef();
 
 	let sendMessage = () => {
-		props.addMessage();
+		props.dispatch({type: "ADD-MESSAGE"});
+		newMessageRef.current.value = '';
 	}
 
 	let onChangeText = () => {
 		let text = newMessageRef.current.value;
-		props.updateNewMessageText(text);
-		
+		let textUpdate = { type: "UPDATE-NEW-MESSAGE-TEXT", newText: text };
+		props.dispatch(textUpdate);
 	}
 
 	return (

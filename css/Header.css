@@ -1,0 +1,8 @@
+.header {
+  grid-area: HEAD;
+  background-color: #015367;
+  color: #fff;
+}
+.header h1 {
+  padding-left: 1em;
+}/*# sourceMappingURL=Header.css.map */

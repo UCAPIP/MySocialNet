@@ -1,7 +1,7 @@
-let reRenderTree = () => {
-}
+
+let store = {
 	
-	let state = {
+	_state: {
 		profile: {
 			postsArr: [
 			{ id: 0, message: 'Слова дауна по имени Иван.', name: 'Иван Иванов', age: 23, countLike: 14 },
@@ -37,43 +37,46 @@ let reRenderTree = () => {
 			]
 		}
 		
-	}
-
-	export const addPost = () => {
-		let newPost = {
-			id: 0,
-			message: state.profile.newPostText,
-			name: "Ivan",
-			age: 0,
-			countLike:0
-		}
-		state.profile.postsArr.push(newPost);
-		state.profile.newPostText = '';
-		reRenderTree(state);
-	}
-
-	export const addMessage = () => {
-		let newMessage = {
-			id: 0,
-			message: state.dialogs.newMessageText
-		}
-		state.dialogs.messageArr.push(newMessage);
-		state.dialogs.newMessageText = '';
-		reRenderTree(state);
-	}
-
-	export const updateNewPostText = (newText) => {
-		state.profile.newPostText = newText;
-		reRenderTree(state);
-		}
-
-	export const updateNewMessageText = (newText) =>{
-		state.dialogs.newMessageText = newText;
-		reRenderTree(state);
-	}
+	},
+	_reRenderTree() {
+	},
 	
-	export const subscribe = (observer) => {
-		reRenderTree = observer;
+	getState() {
+		return this._state;
+	},
+	subscribe(observer) {
+		this._reRenderTree = observer;
+	},
+	
+	dispatch(action) {
+		if (action.type === "ADD-POST") {
+			let newPost = {
+				id: 0,
+				message: this._state.profile.newPostText,
+				name: "Ivan",
+				age: 0,
+				countLike:0
+			}
+			this._state.profile.postsArr.push(newPost);
+			this._state.profile.newPostText = '';
+			this._reRenderTree(this._state);
+		} else if (action.type === "ADD-MESSAGE") {
+				let newMessage = {
+				id: 0,
+				message: this._state.dialogs.newMessageText
+			}
+			this._state.dialogs.messageArr.push(newMessage);
+			this._state.dialogs.newMessageText = '';
+			this._reRenderTree(this._state);
+		} else if (action.type === "UPDATE-NEW-POST-TEXT") {
+			this._state.profile.newPostText = action.newText;
+			this._reRenderTree(this._state);
+		} else if (action.type === "UPDATE-NEW-MESSAGE-TEXT") {
+			this._state.dialogs.newMessageText = action.newText;
+			this._reRenderTree(this._state);
+		}
 	}
+}
 
-	export default state;
+	export default store;
+	Window.store = store;

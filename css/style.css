@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #60B9CE;
+  font-family: "verdana", sans-serif;
+  font-size: 14px;
+}
+
+.app-wrapper {
+  display: grid;
+  grid-template-areas: "HEAD HEAD" "NAVI CONT";
+  grid-template-rows: 50px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.content {
+  grid-area: CONT;
+  background-color: #015367;
+}/*# sourceMappingURL=style.css.map */
