@@ -50,10 +50,6 @@
   background-color: #FF7F00;
   color: #000;
 }
-.friendBox div:active {
-  background-color: #BF7730;
-  color: #000;
-}
 .friendBox img {
   width: 45px;
   height: 45px;
@@ -74,4 +70,11 @@
   margin: 0;
   color: #000;
   font-weight: bold;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-grid-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1fr;
 }

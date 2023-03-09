@@ -8,6 +8,7 @@ const MyPosts = (props) => {
 
 	let addPost = () => {
 		props.dispatch(addPostActionCreator());
+		newPostElement.current.value = '';
 	}
 
 	let onChangePost = () => {

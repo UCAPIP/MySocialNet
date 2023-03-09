@@ -23,7 +23,7 @@ const Nav = (props) => {
 					<NavLink to="/settings" className={navData => navData.isActive ? classes.activeLink : classes.item}>Настройки</NavLink>
 				</p>
 			</nav>
-			<Friends dataFriends={props.navFriends.friendsArr}/>
+			<Friends dataFriends={props.navFriends.friendsList} />
 		</div>
 	);
 }

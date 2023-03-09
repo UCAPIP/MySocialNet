@@ -1,8 +1,16 @@
+import dialogsReducer from "./dialogsReducer";
+import navBarReducer from "./navBarReducer";
+import profileReducer from "./profileReducer";
+
 const ADD_MESSAGE = "ADD-MESSAGE";
 const UPDATE_NEW_MESSAGE_TEXT = "UPDATE-NEW-MESSAGE-TEXT";
 
 const ADD_POST = "ADD-POST";
 const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
+
+const UPLOAD_CONTACTS = "UPLOAD_CONTACTS";
+
+
 
 let store = {
 	
@@ -13,8 +21,7 @@ let store = {
 			{ id: 0, message: 'IDI NHUI LOX.', name: 'GAY DMITROV', age: 5, countLike: 178 },
 			{ id: 0, message: 'Да мне похуй', name: 'Сергей Сергеев', age: 31, countLike: 23 }
 			],
-			newPostText: ''
-			
+			newPostText: ''	
 		},
 
 		dialogs: {
@@ -31,18 +38,13 @@ let store = {
 		},
 
 		navBar: {
-			friendsArr: [
-				{id: 0, name: "Идиот"},
-				{id: 1, name: "Константин-Евдоким"},
-				{id: 2, name: "Бомж"},
-				{id: 3, name: "Челикс"},
-				{id: 3, name: "Челикс"},
-				{id: 3, name: "Челикс"},
-				{id: 4, name: "Хуй"}
+			friendsList: [
+			{ id: 0, name: "Даун Иваныч" },
+			{ id: 1, name: "Даун Лохыч" }
 			]
 		}
-		
 	},
+
 	_reRenderTree() {
 	},
 	
@@ -54,34 +56,14 @@ let store = {
 	},
 	
 	dispatch(action) {
-		if (action.type === ADD_POST) {
-			let newPost = {
-				id: 0,
-				message: this._state.profile.newPostText,
-				name: "Ivan",
-				age: 0,
-				countLike:0
-			}
-			this._state.profile.postsArr.push(newPost);
-			this._state.profile.newPostText = '';
-			this._reRenderTree(this._state);
-		} else if (action.type === ADD_MESSAGE) {
-				let newMessage = {
-				id: 0,
-				message: this._state.dialogs.newMessageText
-			}
-			this._state.dialogs.messageArr.push(newMessage);
-			this._state.dialogs.newMessageText = '';
-			this._reRenderTree(this._state);
-		} else if (action.type === UPDATE_NEW_POST_TEXT) {
-			this._state.profile.newPostText = action.newText;
-			this._reRenderTree(this._state);
-		} else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
-			this._state.dialogs.newMessageText = action.newText;
-			this._reRenderTree(this._state);
-		}
+		this._state.profile = profileReducer(this._state.profile, action);
+		this._state.dialogs = dialogsReducer(this._state.dialogs, action);
+		
+		this._reRenderTree(this._state);
 	}
 }
+
+export const uploadContacts = () => ({ type: UPLOAD_CONTACTS})
 
 export const addPostActionCreator = () => ({ type: ADD_POST });
 export const updateNewPostTextActionCreator = (text) => 

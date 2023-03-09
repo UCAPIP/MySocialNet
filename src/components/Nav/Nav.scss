@@ -53,10 +53,6 @@
 				background-color: $aBgHover;
 				color: $aColorHover;
 			}
-			&:active {
-				background-color: $aBgActive;
-				color: $aColorActive;
-			}
 			
 		}
 		img {
@@ -79,4 +75,7 @@
 		margin: 0;
 		color: $aColorActive;
 		font-weight: bold;
+		display: grid;
+		justify-content: space-between;
+		grid-template-columns: 3fr 1fr;
 	}
