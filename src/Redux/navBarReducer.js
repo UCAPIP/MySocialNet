@@ -1,12 +1,13 @@
-// const UPLOAD_CONTACTS = "UPLOAD_CONTACTS";
+let initialState = {
+	friendsList: [
+			{ id: 0, name: "Даун Иваныч" },
+			{ id: 1, name: "Даун Лохыч" }
+			]
+}
 
-// const navBarReducer = (state, action) => {
+const navBarReducer = (state = initialState, action) => {
 	
-// 		if (action.type === UPLOAD_CONTACTS) {
-// 			state.navBar = state.contactArr;
-// 		}
+	return state;
+}
 
-// 	return state;
-// }
-
-// export default navBarReducer;
+export default navBarReducer;
