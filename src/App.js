@@ -12,6 +12,7 @@ import Settings from './components/Settings/Settings';
 
 
 const App = (props) => {
+  
   return (
     <BrowserRouter>
       <main>
@@ -21,9 +22,9 @@ const App = (props) => {
           <div className='content'>
             <Routes>
               <Route path='/profile' 
-              element={<Profile usersPosts={props.state.profile} dispatch={props.dispatch} />}></Route>
+              element={<Profile store={props.store} />}></Route>
               <Route path='/dialogs/*' 
-              element={<Dialogs usersDialogs={props.state.dialogs} dispatch={props.dispatch} />}></Route>
+              element={<Dialogs store={props.store} />}></Route>
               <Route path='/news' 
               element={<News />}></Route>
               <Route path='/music' 

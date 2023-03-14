@@ -15,14 +15,12 @@ const Messages = (props) => {
 	let newMessageRef = React.createRef();
 
 	let sendMessage = () => {
-		props.dispatch(addMessageActionCreator());
-		newMessageRef.current.value = '';
+		props.sendMessage();
 	}
 
 	let onChangeText = () => {
 		let text = newMessageRef.current.value;
-		let textUpdate = updateNewMessageTextActionCreator(text);
-		props.dispatch(textUpdate);
+		props.onChangeText(text);
 	}
 
 	return (
