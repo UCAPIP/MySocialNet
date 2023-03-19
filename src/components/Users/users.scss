@@ -1,0 +1,61 @@
+@import "./../../scss/variables.scss";
+@import "./../../scss/mixins.scss";
+
+.usersBox {
+		margin: 2em;
+		display: grid;
+		grid-template-columns: 1fr 5fr;
+		align-items: center;
+		color: $aColor;
+		grid-template-rows: 100px 50px;
+		
+		img {
+			width: 70%;
+			margin: 1em;
+			padding: 1em;
+			border-radius: 100%;
+			justify-self: center;
+		}
+		button {
+			width: 70%;
+			font-size: x-small;
+			justify-self: center;
+		}
+}
+
+.title {
+		margin: 1em;
+		background-color: $aBg;
+		padding: 1em;
+		color: $aColor;
+}
+
+.noActive {
+	text-decoration: none;
+}
+
+.yesActive {
+	text-decoration: none;
+}
+
+.item {
+	background-color: $aBg;
+	color: $aColor;
+	padding: 2em;
+	border-radius: 2em;
+	display: grid;
+	grid-template-columns: 9fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	align-items: end;
+}
+
+
+aside {
+	color: $bColor;
+}
+
+.btnShow {
+	width: 30%;
+	font-size: large;
+	margin: 1em 16.24em;
+}

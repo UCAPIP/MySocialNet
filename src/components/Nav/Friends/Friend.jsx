@@ -1,4 +1,4 @@
-import classes from "./../../../css/Nav.module.css";
+
 
 const Friend = (props) => {
 	return (

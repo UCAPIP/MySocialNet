@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-export let reRenderTree = () => {
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
@@ -17,10 +17,4 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
-}
 
-reRenderTree();
-
-store.subscribe( () => {
-  reRenderTree();
-});

@@ -1,12 +1,11 @@
 import React from "react"
-import { addPostActionCreator, updateNewPostTextActionCreator } from "../../../Redux/profileReducer";
 import Post from "./Post";
 import classes from "./../../../css/Content.module.css"
 
 const MyPosts = (props) => {
 
 	let postNew = props.postData.map(p =>
-		<Post message={p.message} name={p.name} age={p.age} countLike={p.countLike} />
+		<Post message={p.message} name={p.name} age={p.age} countLike={p.countLike} key={p.id}/>
 	);
 	
 	let newPostElement = React.createRef();

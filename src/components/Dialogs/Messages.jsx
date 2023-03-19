@@ -9,7 +9,7 @@ import Message from "./Message";
 const Messages = (props) => {
 	
 	let messageNew = props.messagesData.map( m =>
-		<Message id={m.id} message={m.message} />
+		<Message id={m.id} message={m.message} key={m.id} />
 	);
 
 	let newMessageRef = React.createRef();

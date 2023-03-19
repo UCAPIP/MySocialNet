@@ -1,3 +1,4 @@
+
 let initialState = {
 	friendsList: [
 			{ id: 0, name: "Даун Иваныч" },

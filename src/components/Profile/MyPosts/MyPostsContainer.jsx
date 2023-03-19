@@ -29,7 +29,7 @@ let mapStateToProps = (state) => {
 	}
 }
 
-let mapDispatchToProps = (dispatch) => {
+let mapDispatchToProps = (dispatch) => {	
 	return {
 		updateNewPostText: (text) => {
 			let action = updateNewPostTextActionCreator(text);

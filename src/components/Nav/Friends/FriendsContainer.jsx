@@ -4,6 +4,7 @@ import Friends from "./Friends";
 
 
 let mapStateToProps = (state) => {
+	
 	return {
 		dataFriends: state.navBar.friendsList
 	}
