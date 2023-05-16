@@ -31,11 +31,11 @@
   -ms-grid-column-align: center;
       justify-self: center;
 }
-.usersBox button {
-  width: 70%;
+
+.btnSubscribe {
+  width: 100px;
   font-size: x-small;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  margin: 0 auto;
 }
 
 .title {

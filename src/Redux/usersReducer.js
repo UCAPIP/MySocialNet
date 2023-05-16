@@ -1,32 +1,52 @@
-const FOLLOW = "FOLLOW";
-const UNFOLLOW = "UNFOLLOW";
-
+const FOLLOW = 'FOLLOW';
+const UNFOLLOW = 'UNFOLLOW';
+const SET_USERS = 'SET_USERS';
 
 let initialState = {
-		usersList: [
-			{ id: 0, follow: true, name: "Даун Иваныч", status: "Люблю жрать какахи", country: "Россия, ", city: "Москва", age: 26},
-			{ id: 1, follow: false, name: "Семен Сперсов", status: "Яйца", country: "Россия, ", city: "Владимир", age: 26},
-			{ id: 3, follow: true, name: "Даун Лохыч", status: "Ты лоъх!", country: "Россия, ", city: "Москва", age: 36 }
-			]
+		users: [
+			{id: 1, fullName: 'Ivan', followed: false, status: 'Lover of semen', location: {city: 'Moscow', country: 'Russia'}},
+			{id: 2, fullName: 'Dima', followed: true, status: 'Lover of semen', location: {city: 'Moscow', country: 'Russia'}},
+			{id: 3, fullName: 'Andrey', followed: false, status: 'Lover of semen', location: {city: 'Moscow', country: 'Russia'}},
+			{id: 4, fullName: 'Loshpek', followed: true, status: 'Lover of semen', location: {city: 'Moscow', country: 'Russia'}},
+		]
 
 }
 
 const usersReducer = (state = initialState, action) => {
-	
+
 	switch(action.type) {
-
 		case FOLLOW:
-
+			return {
+				...state,
+				users: state.users.map( u => {
+					if(u.id === action.userId) {
+						return {...u, followed: true}
+					}
+					return u;
+				})
+			}
 		case UNFOLLOW:
-
+			return {
+				...state,
+				users: state.users.map( u => {
+					if(u.id === action.userId) {
+						return {...u, followed: false}
+					}
+					return u;
+				})
+			}
+		case SET_USERS:
+			return {
+				...state, users: [...state.users, ...action.users]
+			}
 		default:
 			return state;
 	}
 }
 
-const followAC = (userId) => ({type: FOLLOW, userId});
-const unFollowAC = (userId) => ({type: UNFOLLOW, userId});
 
-
+export const followAC = (userId) => ({type: FOLLOW, userId})
+export const unfollowAC = (userId) => ({type: UNFOLLOW, userId})
+export const setUsersAC = (users) => ({type: SET_USERS, users})
 
 export default usersReducer;

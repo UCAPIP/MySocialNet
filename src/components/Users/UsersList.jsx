@@ -1,5 +1,6 @@
 import classes from "./../../css/Users.module.css";
 import UsersContainer from "./UsersContainer";
+import React, { useState } from 'react';
 
 const UsersList = () => {
 	return (
@@ -8,7 +9,7 @@ const UsersList = () => {
 				<h2>Список пользователей</h2>
 			</div>
 			<UsersContainer />
-			<button className={classes.btnShow}>Показать больше</button>
+			
 		</>
 	)
 }

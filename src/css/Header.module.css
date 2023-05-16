@@ -2,6 +2,12 @@
   grid-area: HEAD;
   background-color: #015367;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .header h1 {
   padding-left: 1em;

@@ -8,6 +8,8 @@ import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 import UsersList from './components/Users/UsersList';
+import Registration from './components/Registration(Login)/Registration';
+import Login from './components/Registration(Login)/Login';
 
 
 
@@ -33,6 +35,10 @@ const App = () => {
               element={<UsersList />}></Route>
               <Route path='/settings' 
               element={<Settings />}></Route>
+              <Route path='/registration' 
+              element={<Registration />}></Route>
+              <Route path='/login' 
+              element={<Login />}></Route>
             </Routes>
           </div>
         </div>
