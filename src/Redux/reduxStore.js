@@ -13,7 +13,7 @@ let rootReducer = combineReducers({
 	profile: profileReducer,
 	dialogs: dialogsReducer,
 	navBar: navBarReducer,
-	users: usersReducer,	
+	usersPage: usersReducer,	
 	user: userReducer, // -- с информацией о пользователе
 	files: fileReducer // -- с информацией о файлах, получаемых с сервера
 });

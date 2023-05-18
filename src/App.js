@@ -7,9 +7,9 @@ import { Routes, Route } from 'react-router-dom';
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
-import UsersList from './components/Users/UsersList';
 import Registration from './components/Registration(Login)/Registration';
 import Login from './components/Registration(Login)/Login';
+import UsersContainer from './components/Users/UsersContainer';
 
 
 
@@ -32,7 +32,7 @@ const App = () => {
               <Route path='/music' 
               element={<Music />}></Route>
               <Route path='/AllUsers' 
-              element={<UsersList />}></Route>
+              element={<UsersContainer />}></Route>
               <Route path='/settings' 
               element={<Settings />}></Route>
               <Route path='/registration' 
