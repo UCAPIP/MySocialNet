@@ -1,21 +1,12 @@
 @import "./../../scss/variables.scss";
 @import "./../../scss/mixins.scss";
 
-.usersBox {
-		margin: 2em;
-		display: grid;
-		grid-template-columns: 1fr 5fr;
-		align-items: center;
-		color: $aColor;
-		grid-template-rows: 100px 50px;
-		
-		img {
-			width: 70%;
-			margin: 1em;
-			padding: 1em;
+
+
+.userAvatar {
+			width: 5em;
 			border-radius: 100%;
 			justify-self: center;
-		}
 }
 
 .btnSubscribe {
@@ -31,32 +22,44 @@
 		color: $aColor;
 }
 
-.noActive {
-	text-decoration: none;
-}
-
-.yesActive {
-	text-decoration: none;
-}
-
 .item {
-	background-color: $aBg;
-	color: $aColor;
-	padding: 2em;
-	border-radius: 2em;
 	display: grid;
-	grid-template-columns: 9fr 1fr;
-	grid-template-rows: 1fr 1fr;
-	align-items: end;
+	grid-template-columns: 1fr 6fr;
+	margin: 1px 2em;
+	padding: 2em;
+	background-color: $aBg;
+	color: white;
+	button {
+		border-radius: 50px;
+		padding:0.5em;
+	}
+	.avabtn {
+		display: grid;
+		justify-self: start;
+	}
+	.avabtnFollowed {
+		display: grid;
+		justify-self: start;
+		
+	}
+	.avabtnFollowed:hover {
+			background-color: $btnSuccess;
+		}
+	.avabtnUnfollowed {
+		display: grid;
+		justify-self: start;
+		background-color: rgba(0, 255, 0, 0.438);
+	}
+	.avabtnUnfollowed:hover {
+			background-color: $btnFail;
+		}
+}
+.main {
+	display: grid;
 }
 
-
-aside {
-	color: $bColor;
-}
-
-.btnShow {
-	width: 30%;
-	font-size: large;
-	margin: 1em 16.24em;
+.btnShowUsers {
+	justify-self: center;
+	margin: 2em;
+	border-radius: 50px;
 }
