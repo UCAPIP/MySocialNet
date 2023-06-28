@@ -3,9 +3,9 @@ const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
 
 let initialState = {
 	postsArr: [
-			{ id: 0, message: 'Слова дауна по имени Иван.', name: 'Иван Иванов', age: 23, countLike: 14 },
-			{ id: 1, message: 'IDI NHUI LOX.', name: 'GAY DMITROV', age: 5, countLike: 178 },
-			{ id: 2, message: 'Да мне похуй', name: 'Сергей Сергеев', age: 31, countLike: 23 }
+			{ id: 0, message: 'Слова чела по имени Иван.', name: 'Иван Иванов', age: 23, countLike: 14 },
+			{ id: 1, message: 'какие-то слова', name: 'ЧЕЛ DMITROV', age: 5, countLike: 178 },
+			{ id: 2, message: 'тесто тест', name: 'Сергей Сергеев', age: 31, countLike: 23 }
 			],
 	newPostText: ''
 }
